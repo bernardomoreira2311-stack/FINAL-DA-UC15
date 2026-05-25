@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BM Copa Store 2026</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header>
+  <h1>BM Copa Store 2026</h1>
+
+  <nav> 
+    <a href="./index.html">Catálogo</a>
+    <a href="./cadastro.html">Cadastro</a>
+    <a href="./menu1.html">História</a>
+    <a href="./menu2.html">Fale com a gente</a>
+    <a href="./menu3.html">Dicas</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="banner">
+    <h2>Produtos da Copa do Mundo 2026</h2>
+    <p>Escolha seus produtos favoritos!</p>
+  </section>
+
+ <section class="carrossel">
+    <div class="carrossel-container">
+      <button class="carrossel-btn esquerda" id="prevBtn" aria-label="Slide anterior">&#10094;</button>
+      <img id="imagemCarrossel" src="assets/img/banner da copa 2.jpg" alt="Promoção Copa 2026">
+      <button class="carrossel-btn direita" id="nextBtn" aria-label="Próximo slide">&#10095;</button>
+    </div>
+    <div class="carrossel-indicadores" id="indicadoresCarrossel"></div>
+  </section>
+
+  <section class="filtros">
+    <input type="text" id="pesquisa" placeholder="Pesquisar produto...">
+
+    <select id="filtroCategoria">
+      <option value="Todos">Todas as categorias</option>
+      <option value="Camisas">Camisas</option>
+      <option value="Acessórios">Acessórios</option>
+      <option value="Bonés">Bonés</option>
+      <option value="Chuteiras">Chuteiras</option>
+      <option value="Outros">Outros</option>
+    </select>
+
+    <button onclick="limparFiltros()">Limpar filtros</button>
+  </section>
+
+  <section>
+    <h2 class="titulo">Catálogo</h2>
+    <div id="listaProdutos" class="produtos"></div>
+  </section>
+
+  <section class="carrinho">
+    <h2>Carrinho</h2>
+
+    <div id="listaCarrinho"></div>
+
+    <h3 id="total">Total: R$ 0,00</h3>
+
+    <div class="pagamento-cartao">
+      <h3>Pagamento com cartão de crédito</h3>
+      <input type="text" id="nomeCartao" placeholder="Nome no cartão">
+      <input type="text" id="numeroCartao" placeholder="Número do cartão">
+      <div class="linha-pagamento">
+        <input type="text" id="validadeCartao" placeholder="Validade (MM/AA)">
+        <input type="text" id="cvvCartao" placeholder="CVV">
+      </div>
+      <button onclick="pagarCartao()" class="btn-vermelho">Pagar com cartão</button>
+    </div>
+
+    <button onclick="limparCarrinho()" class="btn-vermelho">Limpar carrinho</button>
+   
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 BM Copa Store - Todos os direitos reservados.</p>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
